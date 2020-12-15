@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Reader</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="spinner-grow text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-success" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-danger" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+     <a class="navbar-brand" href="#">SDL_Project</a>
+<div class="spinner-grow text-warning" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-info" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-dark" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">_____</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Data_Visualization
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="graph">Graphical Analysis</a>
+          <a class="dropdown-item" href="num">Numerical Analysis</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Coming Soon</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+            Mentor: Mr.Rajesh_Lomte & Mr.Ganesh Deshmukh</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    {% block content %}
+    {% endblock %}
+    {% block code %}
+    {% endblock%}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<br><br>
+<table border="5">
+    <tr>
+        <td>Project_name</td>
+        <td>Project_Starting_date</td>
+        <td>Project_completed_date</td>
+        <td>For_whom_project_is_created</td>
+        <td>How_long_can_the_project_survive_in_market</td>
+        <td>Project_Cost</td>
+        <td>Software</td>
+        <td>Hardware</td>
+        <td>Markup</td>
+        <td>Quantity sold</td>
+        <td>Tax_customer</td>
+        <td>Actual_Tax</td>
+        <td>Total_revenue</td>
+        <td>Profit_per_unit</td>
+        <td>Net_Income</td>
+        <td>Income%</td>
+        <td>Total</td>
+        <td>LOC</td>
+
+    </tr>
+    {% for i in range(0,5) %}
+    <tr>
+        <td>{{head.iloc[i,0]}}</td>
+        <td>{{head.iloc[i,1]}}</td>
+        <td>{{head.iloc[i,2]}}</td>
+        <td>{{head.iloc[i,3]}}</td>
+        <td>{{head.iloc[i,4]}}</td>
+        <td>{{head.iloc[i,5]}}</td>
+        <td>{{head.iloc[i,6]}}</td>
+        <td>{{head.iloc[i,7]}}</td>
+        <td>{{head.iloc[i,8]}}</td>
+        <td>{{head.iloc[i,9]}}</td>
+        <td>{{head.iloc[i,10]}}</td>
+        <td>{{head.iloc[i,11]}}</td>
+        <td>{{head.iloc[i,12]}}</td>
+        <td>{{head.iloc[i,13]}}</td>
+        <td>{{head.iloc[i,14]}}</td>
+        <td>{{head.iloc[i,15]}}</td>
+        <td>{{head.iloc[i,16]}}</td>
+        <td>{{head.iloc[i,17]}}</td>
+        <td>{{head.iloc[i,18]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<!--{{head.iloc[0,1]}}-->
+<!--{{head.iloc[1]}}<br><br>-->
+<!--{{head.iloc[2]}}<br><br>-->
+<!--{{head.iloc[3]}}<br><br>-->
+<!--{{head.iloc[4]}}<br><br>-->
+
+</body>
+</html>
